@@ -1,0 +1,99 @@
+@import url('../../dist/css/reset.css');
+
+@font-face {
+  font-family: 'Proxima Nova Lt';
+  src: url('../../fonts/ProximaNova-Light.eot');
+  src: local('Proxima Nova Light'), local('../../fonts/ProximaNova-Light'),
+  url('../../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/ProximaNova-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display:swap
+}
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src: url('../../fonts/ProximaNova-Regular.eot');
+  src: local('Proxima Nova Regular'), local('../../fonts/ProximaNova-Regular'),
+  url('../../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display:swap
+}
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src: url('../../fonts/ProximaNova-Bold.eot');
+  src: local('Proxima Nova Bold'), local('../../fonts/ProximaNova-Bold'),
+  url('../../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display:swap
+}
+@font-face {
+  font-family: 'Proxima Nova Th';
+  src: url('../../fonts/ProximaNova-Extrabld.eot');
+  src: local('Proxima Nova Extrabold'), local('../../fonts/ProximaNova-Extrabld'),
+  url('../../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/ProximaNova-Extrabld.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display:swap
+}
+@font-face {
+  font-family: 'Proxima Nova Bl';
+  src: url('../../fonts/ProximaNova-Black.eot');
+  src: local('Proxima Nova Black'), local('../../fonts/ProximaNova-Black'),
+  url('../../fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/ProximaNova-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display:swap
+}
+
+
+/* --------- variables --------- */
+$global-bg: #EAEFF5;
+$dark-bg: #233148;
+$medium-dark-bg: #1F65D9;
+$accent-bg: #FCCF18;
+
+$global-color: #233148;
+$inverted-color: #FFF;
+
+$global-font: 'Proxima Nova Lt', sans-serif;
+$font-400-700: 'Proxima Nova Rg', sans-serif;
+$font-800: 'Proxima Nova Th', sans-serif;
+$font-900: 'Proxima Nova Bl', sans-serif;
+
+
+// mixins
+@mixin respond-to($media) {
+  @if $media == screen__425 {
+    @media only screen and (min-width: 425px) { @content; }
+  }
+  @else if $media == creen__768 {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $media == creen__1200 {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+  @else if $media == creen__1440 {
+    @media only screen and (min-width: 1440px) { @content; }
+  }
+  @else if $media == creen__1600 {
+    @media only screen and (min-width: 1600px) { @content; }
+  }
+  @else if $media == creen__1920 {
+    @media only screen and (min-width: 1920px) { @content; }
+  }
+}
+
+body {
+  background: $global-bg;
+  font-family: $global-font;
+}
+h1 {
+  color: $global-color;
+  font-family: $font-900;
+}
