@@ -552,7 +552,7 @@ p {
   height: 417px;
   max-width: initial;
   @include respond-to(screen__375) { margin-left: 20%; }
-  @include respond-to(creen__768) { margin-left: 45.4%; };
+  @include respond-to(creen__768) { margin-left: auto; margin-right: 75px; };
   @include respond-to(creen__1200) { width: 677px; height: auto; };
   @include respond-to(creen__1920) { margin-left: 46.5%; };
 }
