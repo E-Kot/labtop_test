@@ -271,7 +271,8 @@ p {
   gap: 2.95em 0;
   max-width: 976px;
   margin: 0 auto;
-  @include respond-to(creen__1200) { grid-template-columns: 1fr 1fr; gap: 5.5em 5.4em; };
+  @include respond-to(creen__768) { grid-template-columns: 1fr 1fr; gap: 3em 3em;  };
+  @include respond-to(creen__1200) { gap: 5.5em 5.4em; };
   @include respond-to(creen__1920) { gap: 5.6em 5.4em; };
 }
 /* --------- Element animation --------- */
@@ -407,7 +408,7 @@ p {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='375' height='682' viewBox='0 0 375 682' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath opacity='0.02' d='M479.625 360.74V474.219L382.25 531.146L284.875 588.073L236.187 616.536L187.5 645L138.812 616.536L90.1246 588.073L-7.25041 531.146L-105 474.219V360.74L-7.62493 304.187V417.667L89.7501 474.594L138.438 503.057L187.125 531.521L235.813 503.057L284.5 474.594L381.875 417.667V303.813L479.625 360.74ZM479.25 133.406L381.875 76.4794L284.5 19.5524L235.813 -8.53652L187.125 -37L138.438 -8.53652L89.7501 19.927L-7.62493 76.4794L-105 133.406V246.886L-7.62493 190.333L89.7501 133.406L138.438 105.317V389.203L187.125 417.667L235.813 389.203V104.943L284.5 133.406L381.875 190.333L479.25 247.26V133.406Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='584.625' height='682' fill='white' transform='translate(-105)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   background-position: center 10.3em;
   background-repeat: no-repeat;
-  @include respond-to(creen__1200) { background-position: center 10.5em; background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='585' height='682' viewBox='0 0 585 682' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath opacity='0.02' d='M584.625 397.74V511.219L487.25 568.146L389.875 625.073L341.187 653.536L292.5 682L243.812 653.536L195.125 625.073L97.7496 568.146L0 511.219V397.74L97.3751 341.187V454.667L194.75 511.594L243.438 540.057L292.125 568.521L340.813 540.057L389.5 511.594L486.875 454.667V340.813L584.625 397.74ZM584.25 170.406L486.875 113.479L389.5 56.5524L340.813 28.4635L292.125 0L243.438 28.4635L194.75 56.927L97.3751 113.479L0 170.406V283.886L97.3751 227.333L194.75 170.406L243.438 142.317V426.203L292.125 454.667L340.813 426.203V141.943L389.5 170.406L486.875 227.333L584.25 284.26V170.406Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='584.625' height='682' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E"); };
+  @include respond-to(creen__768) { background-position: center 10.5em; background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='585' height='682' viewBox='0 0 585 682' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath opacity='0.02' d='M584.625 397.74V511.219L487.25 568.146L389.875 625.073L341.187 653.536L292.5 682L243.812 653.536L195.125 625.073L97.7496 568.146L0 511.219V397.74L97.3751 341.187V454.667L194.75 511.594L243.438 540.057L292.125 568.521L340.813 540.057L389.5 511.594L486.875 454.667V340.813L584.625 397.74ZM584.25 170.406L486.875 113.479L389.5 56.5524L340.813 28.4635L292.125 0L243.438 28.4635L194.75 56.927L97.3751 113.479L0 170.406V283.886L97.3751 227.333L194.75 170.406L243.438 142.317V426.203L292.125 454.667L340.813 426.203V141.943L389.5 170.406L486.875 227.333L584.25 284.26V170.406Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='584.625' height='682' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E"); };
 }
 .__decor-lines {
   position: relative;
@@ -427,7 +428,7 @@ p {
     border-right: 1px solid $border-color-light;
     .container_content-box {
       padding-bottom: 20em;
-      @include respond-to(creen__1200) { padding-bottom: 1em; };
+      @include respond-to(creen__768) { padding-bottom: 1em; };
       @include respond-to(creen__1920) { padding-bottom: 0.8em; };
     }
     &:before {
@@ -441,16 +442,16 @@ p {
   }
   &+.section {
     margin-top: -15em;
-    @include respond-to(creen__1200) { margin-top: -8.8em; };
+    @include respond-to(creen__768) { margin-top: -8.8em; };
     @include respond-to(creen__1920) { margin-top: -8.6em; };
   }
 }
 .__medium-dark-bg.__left-bg {
-  @include respond-to(creen__1200) {
+  @include respond-to(creen__1440) {
     background-color: rgba(31, 101, 217, 0);
   };
   &:before {
-    @include respond-to(creen__1200) {
+    @include respond-to(creen__1440) {
       content: "";
       position: absolute;
       width: 100%;
@@ -463,7 +464,7 @@ p {
     };
   }
   .banner {
-    @include respond-to(creen__1200) { position: relative; };
+    @include respond-to(creen__1440) { position: relative; };
   }
 }
 .__light-bg {
@@ -505,7 +506,7 @@ p {
   .container {
     padding-top: 12em;
     padding-bottom: 3.6em;
-    @include respond-to(creen__1200) { padding-top: 3.62em; padding-bottom: 3.75em; };
+    @include respond-to(creen__768) { padding-top: 3.62em; padding-bottom: 3.75em; };
     .h3 {
       margin-bottom: 1.55em;
       @include respond-to(creen__1920) { line-height: 1.24; };
@@ -514,6 +515,7 @@ p {
       font-weight: 400;
       letter-spacing: 0.5px;
       width: 13em;
+      @include respond-to(creen__768) { width: 10em; margin-left: 2em; padding-top: 3px; };
       @include respond-to(creen__1200) {
         width: 10em;
         margin-left: 3.8em;
@@ -536,7 +538,7 @@ p {
   left: 0;
   right: 0;
   overflow-x: hidden;
-  @include respond-to(creen__1200) { top: -4.2em; };
+  @include respond-to(creen__768) { top: -4.2em; };
   .__anim-show {
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
@@ -550,12 +552,13 @@ p {
   height: 417px;
   max-width: initial;
   @include respond-to(screen__375) { margin-left: 20%; }
-  @include respond-to(creen__1200) { margin-left: 45.4%; width: 677px; height: auto; };
+  @include respond-to(creen__768) { margin-left: 45.4%; };
+  @include respond-to(creen__1200) { width: 677px; height: auto; };
   @include respond-to(creen__1920) { margin-left: 46.5%; };
 }
 .banner_content {
   position: relative;
-  @include respond-to(creen__1200) { width: 50%; margin-left: 2px; };
+  @include respond-to(creen__768) { width: 50%; margin-left: 2px; };
   .__anim-show {
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
@@ -572,10 +575,10 @@ p {
     right: 0;
     bottom: -5.15em;
     z-index: 3;
-    @include respond-to(creen__1200) { bottom: -3.8em; };
+    @include respond-to(creen__768) { bottom: -3.8em; };
   }
   .__flex {
-    @include respond-to(creen__1200) {
+    @include respond-to(creen__768) {
       width: 100%;
       display: -ms-flexbox;
       display: -webkit-flex;
