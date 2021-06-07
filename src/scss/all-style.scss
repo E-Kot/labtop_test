@@ -275,16 +275,6 @@ p {
   @include respond-to(creen__1920) { gap: 5.6em 5.4em; };
 }
 /* --------- Element animation --------- */
-.__anim-show {
-  transform: translate(0px, 120%);
-  opacity: 0;
-  transition: all 1s ease 0s;
-}
-.__active.__anim-show,
-.__active .__anim-show {
-  transform: translate(0, 0);
-  opacity: 1;
-}
 .anim-element_img {
   transform: scale(0);
   transition: all 1.2s ease 0s;
@@ -294,17 +284,49 @@ p {
     transform: scale(1);
   }
 }
-.anim-element_txt-box {
-  transform: translate(0px, 50%);
-  opacity: 0;
-  transition: all .3s ease 0s;
-}
-.anim-element.__active {
-  .anim-element_txt-box {
-    transform: translate(0px, 0px);
-    opacity: 1;
-    transition: all 0.8s ease 0.6s;
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
   }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+}
+.__active.__anim-show,
+.__active .__anim-show {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.__active.anim-element_txt-box,
+.__active .anim-element_txt-box {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s
 }
 
 .btn-anim {
@@ -463,12 +485,7 @@ p {
     };
   }
 }
-.__medium-dark-bg.__anim-show {
-  opacity: 0;
-  &.__active {
-    opacity: 1;
-  }
-}
+
 
 .card_icon-block {
   margin-bottom: 0.7em;
@@ -521,7 +538,10 @@ p {
   overflow-x: hidden;
   @include respond-to(creen__1200) { top: -4.2em; };
   .__anim-show {
-    transition: all 1.5s ease 0s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s
   }
 }
 .banner_img {
@@ -537,7 +557,10 @@ p {
   position: relative;
   @include respond-to(creen__1200) { width: 50%; margin-left: 2px; };
   .__anim-show {
-    transition: all 1.5s ease 0.8s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s
   }
   .h3 {
     @include respond-to(creen__1200) { letter-spacing: 1px; };
